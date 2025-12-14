@@ -1,0 +1,92 @@
+table 'Online Org'
+	lineageTag: 5f0262e5-b7e4-41d2-9e22-42a4a43db17c
+
+	measure 'Base64 Image' = ```
+			
+			IF( HASONEVALUE('Online Org'[person]), 
+			"data:image/jpeg;base64, " & 
+			CONCATENATEX( 'Images', 'Images'[Pic], , 'Images'[Index], ASC) )
+			```
+		lineageTag: 7cb1b308-0285-4ca6-8df8-df78b26b3bec
+		dataCategory: ImageUrl
+
+	column level1
+		dataType: string
+		lineageTag: 81a4f5c7-9aa5-4c66-b7af-30877b26c020
+		summarizeBy: none
+		sourceColumn: level1
+
+		annotation SummarizationSetBy = Automatic
+
+	column level2
+		dataType: string
+		lineageTag: 99439381-6119-4c1f-b612-aafcd646e245
+		summarizeBy: none
+		sourceColumn: level2
+
+		annotation SummarizationSetBy = Automatic
+
+	column level3
+		dataType: string
+		lineageTag: fcb71df0-b4dd-4763-bce7-2a9c39fc9774
+		summarizeBy: none
+		sourceColumn: level3
+
+		annotation SummarizationSetBy = Automatic
+
+	column level4
+		dataType: string
+		lineageTag: 04871b72-aafa-49b3-ba38-47d6865594a6
+		summarizeBy: none
+		sourceColumn: level4
+
+		annotation SummarizationSetBy = Automatic
+
+	column level5
+		dataType: string
+		lineageTag: 10476fb1-2197-4c0d-b940-5fa7a5467347
+		summarizeBy: none
+		sourceColumn: level5
+
+		annotation SummarizationSetBy = Automatic
+
+	column person
+		dataType: string
+		lineageTag: 52454633-c019-430a-adbb-35b8ce5aea29
+		summarizeBy: none
+		sourceColumn: person
+
+		annotation SummarizationSetBy = Automatic
+
+	column kpi
+		dataType: int64
+		formatString: 0
+		lineageTag: d6c3559b-7410-4e28-bc62-014dd84cc599
+		summarizeBy: none
+		sourceColumn: kpi
+
+		annotation SummarizationSetBy = Automatic
+
+	column image
+		dataType: string
+		lineageTag: 7d8d421a-3f55-427c-a67c-c1647f77deb1
+		summarizeBy: none
+		sourceColumn: image
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Online Org' = m
+		mode: import
+		source =
+				let
+				    Source = Json.Document(Web.Contents("https://raw.githubusercontent.com/PBI-David/Deneb-Showcase/refs/heads/main/Organisation%20Tree%20Chart/data.json")),
+				    #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"level1", "level2", "level3", "level4", "level5", "person", "kpi", "image"}, {"level1", "level2", "level3", "level4", "level5", "person", "kpi", "image"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Column1",{{"level1", type text}, {"level2", type text}, {"level3", type text}, {"level4", type text}, {"level5", type text}, {"person", type text}, {"kpi", Int64.Type}, {"image", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

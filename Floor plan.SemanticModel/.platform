@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Floor plan"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e3365ecb-586e-486d-b74d-67179d11321d"
+  }
+}

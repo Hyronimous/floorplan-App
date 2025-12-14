@@ -1,0 +1,70 @@
+table Images
+	lineageTag: 152512fd-a360-4e59-b124-9d41d524a6fd
+
+	column Name
+		dataType: string
+		lineageTag: 50bd6601-0d87-46a9-ab36-c65e6db50bd6
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pic
+		dataType: string
+		lineageTag: e84fbffc-bb16-4c50-8286-7f97567af721
+		summarizeBy: none
+		sourceColumn: Pic
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: double
+		lineageTag: 10d2022c-ee9a-4812-b997-967ceb6560a5
+		summarizeBy: sum
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Images = m
+		mode: import
+		source = ```
+				let
+				    Source = Json.Document(Web.Contents("https://api.github.com/repositories/573801874/contents/Organisation%20Tree%20Chart/Images")),
+				    #"Converted to Table" = Table.FromList(Source, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Expanded Column1" = Table.ExpandRecordColumn(#"Converted to Table", "Column1", {"name", "download_url"}, {"name", "download_url"}),
+				    #"Added Custom" = Table.AddColumn(#"Expanded Column1", "binary", each Web.Contents([download_url])),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom",{"download_url"}),
+				    //Base64 conversion courtesy of https://blog.crossjoin.co.uk/2019/05/19/storing-large-images-in-power-bi-datasets/
+				  //Creates Splitter function 
+				  SplitTextFunction = Splitter.SplitTextByRepeatedLengths(30000),
+				  //Converts table of files to list 
+				  ListInput = Table.ToRows(#"Removed Columns"),
+				  //Function to convert binary of photo to multiple 
+				  //text values 
+				  ConvertOneFile = (InputRow as list) =>
+				    let
+				      BinaryIn    = InputRow{1},
+				      FileName    = InputRow{0},
+				      BinaryText  = Binary.ToText(BinaryIn, BinaryEncoding.Base64),
+				      SplitUpText = SplitTextFunction(BinaryText),
+				      AddFileName = List.Transform(SplitUpText, each {FileName, _})
+				    in
+				      AddFileName,
+				  //Loops over all photos and calls the above function 
+				  ConvertAllFiles = List.Transform(ListInput, each ConvertOneFile(_)),
+				  //Combines lists together 
+				  CombineLists = List.Combine(ConvertAllFiles),
+				  //Converts results to table 
+				  ToTable = #table(type table [Name = text, Pic = text], CombineLists),
+				  //Adds index column to output table 
+				  AddIndexColumn = Table.AddIndexColumn(ToTable, "Index", 0, 1)
+				in
+				  AddIndexColumn
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
