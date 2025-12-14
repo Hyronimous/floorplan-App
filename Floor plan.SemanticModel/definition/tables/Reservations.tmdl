@@ -1,0 +1,193 @@
+table Reservations
+	lineageTag: 319cfb49-4b80-44e4-92b7-b39598e93324
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: dd6d9f45-0d9b-4b0f-8b7f-ef00c4c17e1b
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeskId
+		dataType: string
+		lineageTag: 494274dd-f78e-42ae-acd0-917fed5f7487
+		summarizeBy: none
+		sourceColumn: DeskId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: aa2ad037-e62e-42ec-883e-b4579c81d4b0
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayPart
+		dataType: string
+		lineageTag: 4c98a5df-1a17-49c0-a58e-71a79ec1a497
+		summarizeBy: none
+		sourceColumn: DayPart
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Reservations = m
+		mode: import
+		source = ```
+				let
+				    // ======================
+				    // PARAMETERS
+				    // ======================
+				    StartDate = #date(2025, 1, 6),     // Monday
+				    NumberOfWeeks = 3,
+				    DayParts = {1, 2},                 // 1 = Morning, 2 = Afternoon
+				
+				    // ======================
+				    // SOURCE QUERIES
+				    // ======================
+				    EmployeesSrc = Employees,
+				    DesksSrc = Desks,
+				
+				    DeskList = DesksSrc[DeskKey],
+				    DeskCount = List.Count(DeskList),
+				
+				    // ======================
+				    // CALENDAR (Mon–Fri)
+				    // ======================
+				    AllDays =
+				        List.Dates(
+				            StartDate,
+				            NumberOfWeeks * 7,
+				            #duration(1, 0, 0, 0)
+				        ),
+				
+				    WeekDays =
+				        List.Select(
+				            AllDays,
+				            each Date.DayOfWeek(_, Day.Monday) < 5
+				        ),
+				
+				    Calendar =
+				        Table.AddColumn(
+				            Table.FromList(WeekDays, Splitter.SplitByNothing(), {"Date"}),
+				            "WeekIndex",
+				            each Number.IntegerDivide(
+				                Duration.Days([Date] - StartDate),
+				                7
+				            ),
+				            Int64.Type
+				        ),
+				
+				    // ======================
+				    // GENERATE RESERVATIONS PER EMPLOYEE
+				    // ======================
+				    AddReservations =
+				        Table.AddColumn(
+				            EmployeesSrc,
+				            "Reservations",
+				            (e as record) =>
+				                let
+				                    EmpId = Number.From(e[id]),
+				                    DaysPerWeek = Number.From(e[numberofworkdays]),
+				
+				                    ByWeek =
+				                        Table.Group(
+				                            Calendar,
+				                            {"WeekIndex"},
+				                            {
+				                                {
+				                                    "PickedDates",
+				                                    (t as table) =>
+				                                        let
+				                                            Dates = List.Sort(t[Date]),
+				                                            Offset = Number.Mod(EmpId, 5),
+				                                            Rotated =
+				                                                List.Skip(Dates, Offset)
+				                                                & List.FirstN(Dates, Offset),
+				                                            Picked =
+				                                                List.FirstN(Rotated, DaysPerWeek)
+				                                        in
+				                                            Picked,
+				                                    type list
+				                                }
+				                            }
+				                        ),
+				
+				                    DatesExpanded =
+				                        Table.ExpandListColumn(ByWeek, "PickedDates"),
+				                    
+				                    DatesRenamed =
+				                        Table.RenameColumns(
+				                            DatesExpanded,
+				                            {{"PickedDates", "Date"}}
+				                        ),
+				
+				                    WithDayParts =
+				                        Table.AddColumn(
+				                            DatesRenamed,
+				                            "DayPart",
+				                            each DayParts
+				                        ),
+				
+				                    ExpandedDayParts =
+				                        Table.ExpandListColumn(
+				                            WithDayParts,
+				                            "DayPart"
+				                        )
+				                in
+				                    ExpandedDayParts
+				        ),
+				
+				    Expanded =
+				        Table.ExpandTableColumn(
+				            AddReservations,
+				            "Reservations",
+				            {"WeekIndex", "Date", "DayPart"},
+				            {"WeekIndex", "Date", "DayPart"}
+				        ),
+				
+				    // ======================
+				    // ASSIGN DESKS (ROUND-ROBIN)
+				    // ======================
+				    WithIndex =
+				        Table.AddIndexColumn(
+				            Expanded,
+				            "ReservationIndex",
+				            0,
+				            1,
+				            Int64.Type
+				        ),
+				
+				    WithDesk =
+				        Table.AddColumn(
+				            WithIndex,
+				            "DeskId",
+				            each DeskList{ Number.Mod([ReservationIndex], DeskCount) },
+				            type text
+				        ),
+				
+				    // ======================
+				    // FINAL SHAPE
+				    // ======================
+				    Final =
+				        Table.SelectColumns(
+				            WithDesk,
+				            {"id", "DeskId", "Date", "DayPart"}
+				        )
+				
+				in
+				    Final
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

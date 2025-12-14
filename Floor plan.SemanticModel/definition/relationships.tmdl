@@ -1,4 +1,12 @@
-relationship a9dda9e4-a3fe-fa74-4253-e10a99c23ffe
-	fromColumn: Images.Name
-	toColumn: 'Online Org'.image
+relationship AutoDetected_c733791f-b4a9-45e5-9499-662de81e9f4b
+	fromColumn: Reservations.DeskId
+	toColumn: Desks.DeskKey
+
+relationship 64432ff2-48ab-7e9d-ebda-35e53d99eb95
+	fromColumn: Reservations.Date
+	toColumn: Dates.Date
+
+relationship 09f1eca6-62a3-d702-fd25-16572356d8d9
+	fromColumn: Reservations.id
+	toColumn: Employees.id
 

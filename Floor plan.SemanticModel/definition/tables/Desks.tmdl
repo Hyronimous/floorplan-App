@@ -1,0 +1,122 @@
+table Desks
+	lineageTag: d2ea54cc-ea38-4f29-ad44-c02c4a241c1c
+
+	column DeskKey
+		dataType: string
+		lineageTag: 2dcfbc70-6a62-4b18-9f7e-b9533b6dd44b
+		summarizeBy: none
+		sourceColumn: DeskKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Floor
+		dataType: int64
+		formatString: 0
+		lineageTag: 79e95f59-094f-4912-8fe2-11e655004de5
+		summarizeBy: none
+		sourceColumn: Floor
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeskName
+		dataType: string
+		lineageTag: 03b6d52e-ccd0-4c01-afd6-8f8c90737ef2
+		summarizeBy: none
+		sourceColumn: DeskName
+
+		annotation SummarizationSetBy = Automatic
+
+	column x
+		dataType: int64
+		formatString: 0
+		lineageTag: 537bd606-e773-48cc-a722-7704b8cbe506
+		summarizeBy: none
+		sourceColumn: x
+
+		annotation SummarizationSetBy = Automatic
+
+	column y
+		dataType: int64
+		formatString: 0
+		lineageTag: ed22aec8-ce7e-499e-bfa3-e11de419ae94
+		summarizeBy: none
+		sourceColumn: y
+
+		annotation SummarizationSetBy = Automatic
+
+	column width
+		dataType: int64
+		formatString: 0
+		lineageTag: aaec6e2b-c336-43fc-8f94-82c1880710d0
+		summarizeBy: none
+		sourceColumn: width
+
+		annotation SummarizationSetBy = Automatic
+
+	column height
+		dataType: int64
+		formatString: 0
+		lineageTag: 4db92ce8-e535-47aa-acbf-1278db5dd4d0
+		summarizeBy: none
+		sourceColumn: height
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Desks = m
+		mode: import
+		source =
+				let
+				    // Generate numbers 1..21
+				    Numbers =
+				        List.Numbers(1, 21),
+				
+				    // Convert to table
+				    ToTable =
+				        Table.FromList(
+				            Numbers,
+				            Splitter.SplitByNothing(),
+				            {"Value"}
+				        ),
+				
+				    // Add DeskKey
+				    AddDeskKey =
+				        Table.AddColumn(
+				            ToTable,
+				            "DeskKey",
+				            each "F01D" & Text.PadStart(Text.From([Value]), 2, "0"),
+				            type text
+				        ),
+				
+				    // Add Floor
+				    AddFloor =
+				        Table.AddColumn(
+				            AddDeskKey,
+				            "Floor",
+				            each 1,
+				            Int64.Type
+				        ),
+				
+				    // Add DeskName
+				    AddDeskName =
+				        Table.AddColumn(
+				            AddFloor,
+				            "DeskName",
+				            each "Desk " & Text.PadStart(Text.From([Value]), 2, "0"),
+				            type text
+				        ),
+				
+				    // Select final columns
+				    Final =
+				        Table.SelectColumns(
+				            AddDeskName,
+				            {"DeskKey", "Floor", "DeskName"}
+				        ),
+				    #"Merged Queries" = Table.NestedJoin(Final, {"DeskKey"}, deskdimensions, {"deskkey"}, "deskdimensions", JoinKind.Inner),
+				    #"Expanded deskdimensions" = Table.ExpandTableColumn(#"Merged Queries", "deskdimensions", {"x", "y", "width", "height"}, {"x", "y", "width", "height"})
+				in
+				    #"Expanded deskdimensions"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

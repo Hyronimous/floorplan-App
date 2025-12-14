@@ -1,0 +1,14 @@
+function AvatarUrl =
+		(
+		        UserId : numeric,
+		        Gender : STRING
+		    ) =>
+		        "https://api.dicebear.com/7.x/avataaars/svg?seed=user_"
+		        & FORMAT ( UserId, "000" )
+		        & IF (
+		            Gender = "Female",
+		            "&gender=female",
+		            "&gender=male"
+		        )
+	lineageTag: 447cab22-0357-40a9-b95d-d3c24cce8b3c
+

@@ -1,0 +1,12 @@
+expression deskdimensions =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("fZJBDsMwCAT/4nMOgDE496qfiPL/b6TQBqsq9IKy2mFJVjmO9gR8ALatdRvENsZ7nNvHptuekNn9trFT5nP4e7pvmtVX/ZJBAsuXlx5Q+xr76M8/wIyAAthNM1QX0LXWPsZ+fgApAgrAO2RvAiADeAEyMmDERxaA18hSA/Zi0mcNmKXwJ8F6VK4TyPT0v4gha5JwAd8J5wU=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [deskkey = _t, x = _t, y = _t, width = _t, height = _t]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"deskkey", type text}, {"x", Int64.Type}, {"y", Int64.Type}, {"width", Int64.Type}, {"height", Int64.Type}})
+		in
+		    #"Changed Type"
+	lineageTag: fed288e7-f8cf-4074-8362-8dede8586c33
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

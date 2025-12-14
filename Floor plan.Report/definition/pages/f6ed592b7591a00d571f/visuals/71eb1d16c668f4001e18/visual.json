@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "71eb1d16c668f4001e18",
   "position": {
-    "x": 9.8969072164948457,
+    "x": 9.2783505154639165,
     "y": 9.8969072164948457,
     "z": 502,
-    "height": 559.85758316505473,
-    "width": 1143.1565522372198
+    "height": 562.95036667020929,
+    "width": 1086.6319481347646
   },
   "visualGroup": {
     "displayName": "Plattegrond",

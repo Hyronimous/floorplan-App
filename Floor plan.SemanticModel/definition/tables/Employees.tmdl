@@ -1,0 +1,74 @@
+table Employees
+	lineageTag: ea8c6c79-893a-41cf-abdf-750d31efaf28
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 657f7aff-3240-479f-8f8d-423d278c65fd
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_name
+		dataType: string
+		lineageTag: 1eadf648-9007-4999-ade3-16b21ebfe1ed
+		summarizeBy: none
+		sourceColumn: first_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_name
+		dataType: string
+		lineageTag: 03e1696f-0fc7-4b42-b141-6a90c8c0c351
+		summarizeBy: none
+		sourceColumn: last_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 878c3af8-26c2-4ec3-bd59-3b366f6e47b0
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column numberofworkdays
+		dataType: int64
+		formatString: 0
+		lineageTag: 91c36eff-762d-452b-81b5-03910f614524
+		summarizeBy: none
+		sourceColumn: numberofworkdays
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: bab9a85f-3cb5-47d6-a2cf-26b6f96bbcf9
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Picture = AvatarUrl([id], [gender])
+		lineageTag: 9c467452-31c3-4ff1-9a88-63052e4b0b86
+		dataCategory: ImageUrl
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Employees = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("fVXLbtswEPwXn4PCjzycWxMnLdqmbmoDDVAjh5W0oRhTpELSNuSv7+7K9qXwnjgja7izy6G8Wg1Gg4vBLBQFLT+hnINzHcGygdIzHn5uujI0LfjuU4hG3nI4eL1YDcZEflXWEb0YfMUIGVJZEw7mSEb/qb9gc9RPZLNYWtngCYoYPKPG9XCsiS+JztFZ4NqBnCLb9qaHE016RXQR0kH8bQup9l3YEo72SC61Da6J/kCXLK2PO4yZ1jUyuNJkN0TvjMeUuMu7Cj2yEkDQtSadEl2SYc+O/4Dhn9OW1htNdUv0BVOmaYa1jLgpyGQKnsjOndj0/BmPhqzbuI2kxHuMEg9XHvCtVn/E2foODSbWzMMOyn3HRt79AYNSeSypoqeYuesZZIy0mpJBodadyPvRhUTgPlpoAme6EFQqNTlVy67CPtMvNUIlw0q7HlZqWQ7WfbDGsnhpaULcd5EEoVKWA/V7QzcJuNhf8DY4zJnz9bE/sTdlB8lWhIKcy42gW0CtRjYC5kiM6n4qCdlEsHILZzXmGho57B7WqpzDNrMpWWT1AooCcub5l/GAraYfc9Dm0v8D+tTf5krQu6rjjC2hgl7oyQGfV9XDtSodi9SFRs54QY2LlieQnPLdm8g3x1Xs8ZkPV+Zs2h42ipLz9ejeIorfO7u367C1eU8E4cS86ppTNnMQZUTP9DjXIbbsoGxPLKhbcN6WGd8oWhLVtfVGEk8TE9iq8hvpAj3n83kTt/3Mse3hh6qdSrSiTbmTr37wZhdiruVPx51YVDeRrIVKzD916DtvRN7DdP4AJkOZGX92HzaRa7YVrfmM4vUf", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [id = _t, first_name = _t, last_name = _t, email = _t, gender = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"id", Int64.Type}, {"first_name", type text}, {"last_name", type text}, {"email", type text}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "numberofworkdays", each Number.Round(Number.RandomBetween(3,5)), Int64.Type)
+				in
+				    #"Added Custom"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

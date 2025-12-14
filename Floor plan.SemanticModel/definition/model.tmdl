@@ -9,15 +9,15 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Table","Org","Online Org","Images"]
+annotation PBI_QueryOrder = ["Employees","Reservations","Desks","Dates","_Measures","deskdimensions"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
-ref table Table
-ref table Org
-ref table 'Online Org'
-ref table Images
-ref table Desk
+ref table Employees
+ref table Reservations
+ref table Desks
+ref table Dates
+ref table _Measures
 
 ref cultureInfo en-GB
 

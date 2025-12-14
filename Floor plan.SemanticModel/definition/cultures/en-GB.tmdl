@@ -5,21 +5,21 @@ cultureInfo en-GB
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "table": {
+			    "employee": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Table"
+			          "ConceptualEntity": "Employees"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "table": {
+			          "employee": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "tabletop": {
+			          "worker": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -29,7 +29,37 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "bench": {
+			          "servant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "member": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "underling": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "operative": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -39,13 +69,895 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "board": {
+			          "hand": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "employee.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Identifier"
+			    },
+			    "employee.first_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "first_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "first nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "first title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "first label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "first tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "1st name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "employee.last_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "last_name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "last_name": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "last nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "last title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "last label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "last tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "end name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "final name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "closing name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "concluding name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finishing name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "former name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "employee.email": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "email"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "employee.numberofworkday": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "numberofworkdays"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numberofworkday": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "employee.gender": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "gender"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gender": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sexuality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "sex": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "employee.picture": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Employees",
+			          "ConceptualProperty": "Picture"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "picture": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "depiction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "portrait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "representation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "delineation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "portrayal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "illustration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "likeness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "image": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "photograph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "photo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "reservation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reservations"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reservation": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "registration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "booking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "unwillingness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "reluctance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "hesitation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "aloofness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "formality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "shyness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "coolness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "reservation.id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reservations",
+			          "ConceptualProperty": "id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "reservation.desk_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reservations",
+			          "ConceptualProperty": "DeskId"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "desk id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DeskId": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "desk identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "desk identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "desk identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "desk credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "reservation.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reservations",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "reservation.day_part": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Reservations",
+			          "ConceptualProperty": "DayPart"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "day part": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DayPart": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "part": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "day quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "day share": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day slice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day chunk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "day segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "desk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Desks"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desk": {
+			            "State": "Generated"
 			          }
 			        },
 			        {
@@ -57,216 +969,352 @@ cultureInfo en-GB
 			            },
 			            "Weight": 0.476
 			          }
-			        },
-			        {
-			          "stand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "slab": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "desk": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "stall": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "table top": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "spreadsheet": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
 			        }
 			      ]
 			    },
-			    "table.column_1": {
+			    "desk.desk_key": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Table",
-			          "ConceptualProperty": "Column1"
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "DeskKey"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "column 1": {
+			          "desk key": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Column1": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "org": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "org": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "org.level_1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "level1"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 1": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level1": {
+			          "DeskKey": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "quantity 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
+			          "key": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "threshold 1": {
+			          "main": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.6
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "amount 1": {
+			          "basic": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "grade 1": {
+			          "fundamental": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "point 1": {
+			          "central": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "rank 1": {
+			          "major": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "tier 1": {
+			          "keynote": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.582
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "essential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "desk solution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "desk explanation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "desk basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
 			          }
 			        }
 			      ]
 			    },
-			    "org.person": {
+			    "desk.floor": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "person"
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "Floor"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "person": {
+			          "floor": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "creature": {
+			          "ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "base": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "flooring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "surface": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "flat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "story": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "deck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "desk.desk_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "DeskName"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "desk name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "name": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "DeskName": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "desk nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "desk title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "desk label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "desk tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "desk.x": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "x"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "x": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "desk.y": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "y"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "y": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "desk.width": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "width"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "width": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "breadth": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -276,981 +1324,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "being": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "individual": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "soul": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "type": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "party": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "human": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "self": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "body": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        },
-			        {
-			          "form": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        }
-			      ]
-			    },
-			    "org.kpi": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "kpi"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "kpi": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "org.level_2": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "level2"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 2": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level2": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "org.level_3": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "level3"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 3": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level3": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "org.level_4": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "level4"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 4": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level4": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "org.level_5": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Org",
-			          "ConceptualProperty": "level5"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 5": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level5": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "online_org": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "online org": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.level_1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "level1"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 1": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level1": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 1": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.level_2": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "level2"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 2": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level2": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 2": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.level_3": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "level3"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 3": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level3": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 3": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.level_4": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "level4"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 4": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level4": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 4": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.level_5": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "level5"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "level 5": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "level5": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "quantity 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "threshold 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "amount 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "grade 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "point 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "rank 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "tier 5": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.person": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "person"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "person": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "creature": {
+			          "measurement": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1260,7 +1334,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "being": {
+			          "thickness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1270,7 +1344,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "individual": {
+			          "size": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1280,109 +1354,33 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "soul": {
+			          "girth": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "type": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "party": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "human": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "self": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "body": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        },
-			        {
-			          "form": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
 			          }
 			        }
 			      ]
 			    },
-			    "online_org.kpi": {
+			    "desk.height": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "kpi"
+			          "ConceptualEntity": "Desks",
+			          "ConceptualProperty": "height"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "kpi": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "online_org.image": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "image"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "image": {
+			          "height": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "doppelgänger": {
+			          "tallness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1392,47 +1390,47 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "copy": {
+			          "stature": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.491
 			          }
 			        },
 			        {
-			          "twin": {
+			          "elevation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.491
 			          }
 			        },
 			        {
-			          "double": {
+			          "altitude": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.491
 			          }
 			        },
 			        {
-			          "duplicate": {
+			          "loftiness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.491
 			          }
 			        },
 			        {
-			          "appearance": {
+			          "apex": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1442,7 +1440,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "persona": {
+			          "acme": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1452,7 +1450,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "aura": {
+			          "zenith": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1462,43 +1460,316 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "aspect": {
+			          "pinnacle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.466
+			            "Weight": 0.452
 			          }
 			        },
 			        {
-			          "semblance": {
+			          "summit": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.466
+			            "Weight": 0.452
 			          }
 			        }
 			      ]
 			    },
-			    "online_org.Base64_image": {
+			    "date": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Online Org",
-			          "ConceptualProperty": "Base64 Image"
+			          "ConceptualEntity": "Dates"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Base64 image": {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.87
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "date.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "base64 doppelgänger": {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "date.month_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "MonthNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MonthNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "date.week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "Week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "week": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "date.weekday_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "WeekdayNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "weekday number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WeekdayNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "weekday no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "date.weekday": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dates",
+			          "ConceptualProperty": "Weekday"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "weekday": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ordinary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "basic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "routine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_ degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1508,7 +1779,37 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "base64 copy": {
+			          "_ quantity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "_ amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1518,7 +1819,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "base64 twin": {
+			          "_ portion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1528,7 +1829,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "base64 double": {
+			          "_ ration": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1538,7 +1839,7 @@ cultureInfo en-GB
 			          }
 			        },
 			        {
-			          "base64 duplicate": {
+			          "_ size": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1546,59 +1847,75 @@ cultureInfo en-GB
 			            },
 			            "Weight": 0.485
 			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.number_of_reservations": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Number of Reservations"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "number of reservations": {
+			            "State": "Generated"
+			          }
 			        },
 			        {
-			          "base64 appearance": {
+			          "quantity of reservation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.769
 			          }
 			        },
 			        {
-			          "base64 persona": {
+			          "amount of reservation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.746
 			          }
 			        },
 			        {
-			          "base64 aura": {
+			          "count of reservation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.746
 			          }
 			        },
 			        {
-			          "base64 aspect": {
+			          "number of reservation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.746
 			          }
 			        },
 			        {
-			          "base64 semblance": {
+			          "no of reservation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.475
+			            "Weight": 0.739
 			          }
 			        },
 			        {
-			          "image": {
+			          "ReservationCount": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1608,497 +1925,267 @@ cultureInfo en-GB
 			          }
 			        }
 			      ]
-			    },
-			    "image": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Images"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "image": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "doppelgänger": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "copy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "twin": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "double": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "duplicate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "appearance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "persona": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "aura": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "aspect": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "semblance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        }
-			      ]
-			    },
-			    "image.name": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Images",
-			          "ConceptualProperty": "Name"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "name": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "title": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ]
-			    },
-			    "image.pic": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Images",
-			          "ConceptualProperty": "Pic"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pic": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "image.index": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Images",
-			          "ConceptualProperty": "Index"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "index": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "directory": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "catalogue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "catalog": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "guide": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "file": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "key": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "manifestation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "pointer": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "indication": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "indicator": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        }
-			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "image_has_online_org": {
+			    "employee_is_named_id": {
 			      "Binding": {
-			        "ConceptualEntity": "Images"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "image": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "image"
+			            "Entity": "employee"
 			          }
 			        },
-			        "online_org": {
+			        "employee.id": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "employee.id"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Name": {
 			            "Subject": {
-			              "Role": "image"
+			              "Role": "employee"
 			            },
-			            "Object": {
-			              "Role": "online_org"
+			            "Name": {
+			              "Role": "employee.id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "images_have_online_org"
+			          "ID": "ids_are_names_IDs_of_employees"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "employee"
 			            },
 			            "Object": {
-			              "Role": "image"
+			              "Role": "employee.id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_images"
+			          "ID": "employees_have_ids"
 			        }
 			      ]
 			    },
-			    "image_has_index": {
+			    "employee_is_named_first_name": {
 			      "Binding": {
-			        "ConceptualEntity": "Images"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "image": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "image"
+			            "Entity": "employee"
 			          }
 			        },
-			        "image.index": {
+			        "employee.first_name": {
 			          "Target": {
-			            "Entity": "image.index"
+			            "Entity": "employee.first_name"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Name": {
 			            "Subject": {
-			              "Role": "image"
+			              "Role": "employee"
 			            },
-			            "Object": {
-			              "Role": "image.index"
+			            "Name": {
+			              "Role": "employee.first_name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "images_have_indices"
+			          "ID": "first_names_are_names_IDs_of_employees"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "employee"
+			            },
+			            "Object": {
+			              "Role": "employee.first_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "employees_have_first_names"
 			        }
 			      ]
 			    },
-			    "image_has_pic": {
+			    "employee_is_named_last_name": {
 			      "Binding": {
-			        "ConceptualEntity": "Images"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "image": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "image"
+			            "Entity": "employee"
 			          }
 			        },
-			        "image.pic": {
+			        "employee.last_name": {
 			          "Target": {
-			            "Entity": "image.pic"
+			            "Entity": "employee.last_name"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Name": {
 			            "Subject": {
-			              "Role": "image"
+			              "Role": "employee"
 			            },
-			            "Object": {
-			              "Role": "image.pic"
+			            "Name": {
+			              "Role": "employee.last_name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "images_have_pic"
+			          "ID": "last_names_are_names_IDs_of_employees"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "employee"
+			            },
+			            "Object": {
+			              "Role": "employee.last_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "employees_have_last_names"
 			        }
 			      ]
 			    },
-			    "online_org_has_Base64_image": {
+			    "desk_is_named_desk_name": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "desk"
 			          }
 			        },
-			        "online_org.Base64_image": {
+			        "desk.desk_name": {
 			          "Target": {
-			            "Entity": "online_org.Base64_image"
+			            "Entity": "desk.desk_name"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Name": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "desk"
 			            },
-			            "Object": {
-			              "Role": "online_org.Base64_image"
+			            "Name": {
+			              "Role": "desk.desk_name"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_Base64_image"
+			          "ID": "desk_names_are_names_IDs_of_desks"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "desk"
+			            },
+			            "Object": {
+			              "Role": "desk.desk_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "desks_have_desk_names"
 			        }
 			      ]
 			    },
-			    "image_has_online_org_Base64_image": {
+			    "desk_is_tall": {
 			      "Binding": {
-			        "ConceptualEntity": "Images"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "image": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "image"
+			            "Entity": "desk"
 			          }
 			        },
-			        "online_org.Base64_image": {
+			        "desk.height": {
 			          "Target": {
-			            "Entity": "online_org.Base64_image"
+			            "Entity": "desk.height"
 			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Adjective": {
 			            "Subject": {
-			              "Role": "image"
+			              "Role": "desk"
 			            },
-			            "Object": {
-			              "Role": "online_org.Base64_image"
+			            "Adjectives": [
+			              {
+			                "tall": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "short": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "desk.height"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "images_have_Base64_image"
+			          "ID": "height_indicates_how_tall_desks_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "desk"
+			            },
+			            "Object": {
+			              "Role": "desk.height"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "desks_have_heights"
 			        }
 			      ]
 			    },
-			    "online_org_has_image": {
+			    "employee_has_email": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "employee"
 			          }
 			        },
-			        "online_org.image": {
+			        "employee.email": {
 			          "Target": {
-			            "Entity": "online_org.image"
+			            "Entity": "employee.email"
 			          }
 			        }
 			      },
@@ -2106,32 +2193,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "employee"
 			            },
 			            "Object": {
-			              "Role": "online_org.image"
+			              "Role": "employee.email"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_images1"
+			          "ID": "employees_have_emails"
 			        }
 			      ]
 			    },
-			    "online_org_has_kpi": {
+			    "employee_has_numberofworkday": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "employee"
 			          }
 			        },
-			        "online_org.kpi": {
+			        "employee.numberofworkday": {
 			          "Target": {
-			            "Entity": "online_org.kpi"
+			            "Entity": "employee.numberofworkday"
 			          }
 			        }
 			      },
@@ -2139,32 +2226,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "employee"
 			            },
 			            "Object": {
-			              "Role": "online_org.kpi"
+			              "Role": "employee.numberofworkday"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_kpis"
+			          "ID": "employees_have_numberofworkdays"
 			        }
 			      ]
 			    },
-			    "online_org_has_person": {
+			    "employee_has_gender": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "employee"
 			          }
 			        },
-			        "online_org.person": {
+			        "employee.gender": {
 			          "Target": {
-			            "Entity": "online_org.person"
+			            "Entity": "employee.gender"
 			          }
 			        }
 			      },
@@ -2172,32 +2259,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "employee"
 			            },
 			            "Object": {
-			              "Role": "online_org.person"
+			              "Role": "employee.gender"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_people"
+			          "ID": "employees_have_genders"
 			        }
 			      ]
 			    },
-			    "online_org_has_level_5": {
+			    "employee_has_picture": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Employees"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "employee": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "employee"
 			          }
 			        },
-			        "online_org.level_5": {
+			        "employee.picture": {
 			          "Target": {
-			            "Entity": "online_org.level_5"
+			            "Entity": "employee.picture"
 			          }
 			        }
 			      },
@@ -2205,32 +2292,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "employee"
 			            },
 			            "Object": {
-			              "Role": "online_org.level_5"
+			              "Role": "employee.picture"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_level_5"
+			          "ID": "employees_have_pictures"
 			        }
 			      ]
 			    },
-			    "online_org_has_level_4": {
+			    "reservation_has_date": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Reservations"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "reservation": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "reservation"
 			          }
 			        },
-			        "online_org.level_4": {
+			        "reservation.date": {
 			          "Target": {
-			            "Entity": "online_org.level_4"
+			            "Entity": "reservation.date"
 			          }
 			        }
 			      },
@@ -2238,32 +2325,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "reservation"
 			            },
 			            "Object": {
-			              "Role": "online_org.level_4"
+			              "Role": "reservation.date"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_level_4"
+			          "ID": "reservations_have_dates"
 			        }
 			      ]
 			    },
-			    "online_org_has_level_3": {
+			    "reservation_has_day_part": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Reservations"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "reservation": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "reservation"
 			          }
 			        },
-			        "online_org.level_3": {
+			        "reservation.day_part": {
 			          "Target": {
-			            "Entity": "online_org.level_3"
+			            "Entity": "reservation.day_part"
 			          }
 			        }
 			      },
@@ -2271,32 +2358,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "reservation"
 			            },
 			            "Object": {
-			              "Role": "online_org.level_3"
+			              "Role": "reservation.day_part"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_level_3"
+			          "ID": "reservations_have_day_parts"
 			        }
 			      ]
 			    },
-			    "online_org_has_level_2": {
+			    "desk_has_desk_key": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "desk"
 			          }
 			        },
-			        "online_org.level_2": {
+			        "desk.desk_key": {
 			          "Target": {
-			            "Entity": "online_org.level_2"
+			            "Entity": "desk.desk_key"
 			          }
 			        }
 			      },
@@ -2304,32 +2391,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "desk"
 			            },
 			            "Object": {
-			              "Role": "online_org.level_2"
+			              "Role": "desk.desk_key"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_level_2"
+			          "ID": "desks_have_desk_keys"
 			        }
 			      ]
 			    },
-			    "online_org_has_level_1": {
+			    "desk_has_floor": {
 			      "Binding": {
-			        "ConceptualEntity": "Online Org"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "online_org": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "online_org"
+			            "Entity": "desk"
 			          }
 			        },
-			        "online_org.level_1": {
+			        "desk.floor": {
 			          "Target": {
-			            "Entity": "online_org.level_1"
+			            "Entity": "desk.floor"
 			          }
 			        }
 			      },
@@ -2337,32 +2424,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "online_org"
+			              "Role": "desk"
 			            },
 			            "Object": {
-			              "Role": "online_org.level_1"
+			              "Role": "desk.floor"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "online_org_have_level_1"
+			          "ID": "desks_have_floors"
 			        }
 			      ]
 			    },
-			    "org_has_level_5": {
+			    "desk_has_x": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "desk"
 			          }
 			        },
-			        "org.level_5": {
+			        "desk.x": {
 			          "Target": {
-			            "Entity": "org.level_5"
+			            "Entity": "desk.x"
 			          }
 			        }
 			      },
@@ -2370,32 +2457,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "desk"
 			            },
 			            "Object": {
-			              "Role": "org.level_5"
+			              "Role": "desk.x"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_level_5"
+			          "ID": "desks_have_x"
 			        }
 			      ]
 			    },
-			    "org_has_level_4": {
+			    "desk_has_y": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "desk"
 			          }
 			        },
-			        "org.level_4": {
+			        "desk.y": {
 			          "Target": {
-			            "Entity": "org.level_4"
+			            "Entity": "desk.y"
 			          }
 			        }
 			      },
@@ -2403,32 +2490,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "desk"
 			            },
 			            "Object": {
-			              "Role": "org.level_4"
+			              "Role": "desk.y"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_level_4"
+			          "ID": "desks_have_y"
 			        }
 			      ]
 			    },
-			    "org_has_level_3": {
+			    "desk_has_width": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Desks"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "desk": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "desk"
 			          }
 			        },
-			        "org.level_3": {
+			        "desk.width": {
 			          "Target": {
-			            "Entity": "org.level_3"
+			            "Entity": "desk.width"
 			          }
 			        }
 			      },
@@ -2436,32 +2523,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "desk"
 			            },
 			            "Object": {
-			              "Role": "org.level_3"
+			              "Role": "desk.width"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_level_3"
+			          "ID": "desks_have_widths"
 			        }
 			      ]
 			    },
-			    "org_has_level_2": {
+			    "date_has_date": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Dates"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "date": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "date"
 			          }
 			        },
-			        "org.level_2": {
+			        "date.date": {
 			          "Target": {
-			            "Entity": "org.level_2"
+			            "Entity": "date.date"
 			          }
 			        }
 			      },
@@ -2469,32 +2556,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "date"
 			            },
 			            "Object": {
-			              "Role": "org.level_2"
+			              "Role": "date.date"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_level_2"
+			          "ID": "dates_have_dates"
 			        }
 			      ]
 			    },
-			    "org_has_kpi": {
+			    "date_has_year": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Dates"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "date": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "date"
 			          }
 			        },
-			        "org.kpi": {
+			        "date.year": {
 			          "Target": {
-			            "Entity": "org.kpi"
+			            "Entity": "date.year"
 			          }
 			        }
 			      },
@@ -2502,32 +2589,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "date"
 			            },
 			            "Object": {
-			              "Role": "org.kpi"
+			              "Role": "date.year"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_kpis"
+			          "ID": "dates_have_years"
 			        }
 			      ]
 			    },
-			    "org_has_person": {
+			    "date_has_month_number": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Dates"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "date": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "date"
 			          }
 			        },
-			        "org.person": {
+			        "date.month_number": {
 			          "Target": {
-			            "Entity": "org.person"
+			            "Entity": "date.month_number"
 			          }
 			        }
 			      },
@@ -2535,32 +2622,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "date"
 			            },
 			            "Object": {
-			              "Role": "org.person"
+			              "Role": "date.month_number"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_people"
+			          "ID": "dates_have_month_numbers"
 			        }
 			      ]
 			    },
-			    "org_has_level_1": {
+			    "date_has_month": {
 			      "Binding": {
-			        "ConceptualEntity": "Org"
+			        "ConceptualEntity": "Dates"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "org": {
+			        "date": {
 			          "Target": {
-			            "Entity": "org"
+			            "Entity": "date"
 			          }
 			        },
-			        "org.level_1": {
+			        "date.month": {
 			          "Target": {
-			            "Entity": "org.level_1"
+			            "Entity": "date.month"
 			          }
 			        }
 			      },
@@ -2568,32 +2655,32 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "org"
+			              "Role": "date"
 			            },
 			            "Object": {
-			              "Role": "org.level_1"
+			              "Role": "date.month"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "org_have_level_1"
+			          "ID": "dates_have_months"
 			        }
 			      ]
 			    },
-			    "table_has_column_1": {
+			    "date_has_week": {
 			      "Binding": {
-			        "ConceptualEntity": "Table"
+			        "ConceptualEntity": "Dates"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "table": {
+			        "date": {
 			          "Target": {
-			            "Entity": "table"
+			            "Entity": "date"
 			          }
 			        },
-			        "table.column_1": {
+			        "date.week": {
 			          "Target": {
-			            "Entity": "table.column_1"
+			            "Entity": "date.week"
 			          }
 			        }
 			      },
@@ -2601,15 +2688,252 @@ cultureInfo en-GB
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "table"
+			              "Role": "date"
 			            },
 			            "Object": {
-			              "Role": "table.column_1"
+			              "Role": "date.week"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tables_have_column_1"
+			          "ID": "dates_have_weeks"
+			        }
+			      ]
+			    },
+			    "date_has_weekday_number": {
+			      "Binding": {
+			        "ConceptualEntity": "Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.weekday_number": {
+			          "Target": {
+			            "Entity": "date.weekday_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.weekday_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_weekday_numbers"
+			        }
+			      ]
+			    },
+			    "date_has_weekday": {
+			      "Binding": {
+			        "ConceptualEntity": "Dates"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        },
+			        "date.weekday": {
+			          "Target": {
+			            "Entity": "date.weekday"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "date.weekday"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_weekdays"
+			        }
+			      ]
+			    },
+			    "reservation_has_entity__measure_number_of_reservations": {
+			      "Binding": {
+			        "ConceptualEntity": "Reservations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reservation": {
+			          "Target": {
+			            "Entity": "reservation"
+			          }
+			        },
+			        "entity__measure.number_of_reservations": {
+			          "Target": {
+			            "Entity": "entity__measure.number_of_reservations"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reservation"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.number_of_reservations"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reservations_have_number_of_reservations"
+			        }
+			      ]
+			    },
+			    "reservation_has_desk": {
+			      "Binding": {
+			        "ConceptualEntity": "Reservations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reservation": {
+			          "Target": {
+			            "Entity": "reservation"
+			          }
+			        },
+			        "desk": {
+			          "Target": {
+			            "Entity": "desk"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reservation"
+			            },
+			            "Object": {
+			              "Role": "desk"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reservations_have_desks"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "desk"
+			            },
+			            "Object": {
+			              "Role": "reservation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "desks_have_reservations"
+			        }
+			      ]
+			    },
+			    "reservation_has_date1": {
+			      "Binding": {
+			        "ConceptualEntity": "Reservations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reservation": {
+			          "Target": {
+			            "Entity": "reservation"
+			          }
+			        },
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reservation"
+			            },
+			            "Object": {
+			              "Role": "date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reservations_have_dates1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "reservation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_reservations"
+			        }
+			      ]
+			    },
+			    "reservation_has_employee": {
+			      "Binding": {
+			        "ConceptualEntity": "Reservations"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "reservation": {
+			          "Target": {
+			            "Entity": "reservation"
+			          }
+			        },
+			        "employee": {
+			          "Target": {
+			            "Entity": "employee"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "reservation"
+			            },
+			            "Object": {
+			              "Role": "employee"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "reservations_have_employees"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "employee"
+			            },
+			            "Object": {
+			              "Role": "reservation"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "employees_have_reservations"
 			        }
 			      ]
 			    }

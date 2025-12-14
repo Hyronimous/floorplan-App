@@ -1,0 +1,149 @@
+table Dates
+	lineageTag: d57684b6-0a7b-4fd6-94f0-7fde6237a9ce
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7a655ef2-f514-404c-9465-fa3197ea06dd
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 02dfcb02-079c-4702-9d1a-17d2d90ec345
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: d841ffea-c2a5-4f5d-80ef-b2aaee91251f
+		summarizeBy: none
+		sourceColumn: MonthNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: c5756d34-e7d6-4a69-baed-b270d598945b
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: f7bd30e7-df57-46af-86a5-8c60c8e63ebc
+		summarizeBy: none
+		sourceColumn: Week
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekdayNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 994a4b68-f5a7-42f3-9761-e7c980db0b83
+		summarizeBy: none
+		sourceColumn: WeekdayNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		dataType: string
+		lineageTag: feb76991-7333-4918-b18a-fb517f9f0097
+		summarizeBy: none
+		sourceColumn: Weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dates = m
+		mode: import
+		source =
+				let
+				    // Simple demo range
+				    StartDate = #date(2025, 1, 1),
+				    EndDate   = #date(2025, 3, 31),
+				
+				    // Generate dates
+				    Dates =
+				        List.Dates(
+				            StartDate,
+				            Duration.Days(EndDate - StartDate) + 1,
+				            #duration(1, 0, 0, 0)
+				        ),
+				
+				    DateTable =
+				        Table.FromList(
+				            Dates,
+				            Splitter.SplitByNothing(),
+				            {"Date"}
+				        ),
+				    #"Changed Type" = Table.TransformColumnTypes(DateTable,{{"Date", type date}}),
+				
+				    // Year
+				    AddYear =
+				        Table.AddColumn(
+				            #"Changed Type",
+				            "Year",
+				            each Date.Year([Date]),
+				            Int64.Type
+				        ),
+				
+				    // Month
+				    AddMonthNumber =
+				        Table.AddColumn(
+				            AddYear,
+				            "MonthNumber",
+				            each Date.Month([Date]),
+				            Int64.Type
+				        ),
+				
+				    AddMonthShort =
+				        Table.AddColumn(
+				            AddMonthNumber,
+				            "Month",
+				            each Text.Start(Date.MonthName([Date]), 3),
+				            type text
+				        ),
+				
+				    // Week
+				    AddWeekNumber =
+				        Table.AddColumn(
+				            AddMonthShort,
+				            "Week",
+				            each Date.WeekOfYear([Date], Day.Monday),
+				            Int64.Type
+				        ),
+				
+				    // Weekday
+				    AddWeekdayNumber =
+				        Table.AddColumn(
+				            AddWeekNumber,
+				            "WeekdayNumber",
+				            each Date.DayOfWeek([Date], Day.Monday) + 1,
+				            Int64.Type
+				        ),
+				
+				    AddWeekdayName =
+				        Table.AddColumn(
+				            AddWeekdayNumber,
+				            "Weekday",
+				            each Date.DayOfWeekName([Date]),
+				            type text
+				        )
+				
+				in
+				    AddWeekdayName
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

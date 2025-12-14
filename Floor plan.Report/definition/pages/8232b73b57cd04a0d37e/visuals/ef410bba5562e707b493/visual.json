@@ -1,0 +1,138 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "ef410bba5562e707b493",
+  "position": {
+    "x": 320.41237113402059,
+    "y": 92.783505154639172,
+    "z": 1,
+    "height": 564.74226804123714,
+    "width": 757.11340206185571
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Reservations"
+                    }
+                  },
+                  "Property": "DayPart"
+                }
+              },
+              "queryRef": "Reservations.DayPart",
+              "nativeQueryRef": "DayPart",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Desks"
+                    }
+                  },
+                  "Property": "DeskName"
+                }
+              },
+              "queryRef": "Desks.DeskName",
+              "nativeQueryRef": "DeskName",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Number of Reservations"
+                }
+              },
+              "queryRef": "_Measures.Number of Reservations",
+              "nativeQueryRef": "Number of Reservations"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Number of Reservations"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1b1667616fe9dac4c440",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Number of Reservations"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f7d2fb48ec7bd4e1bf2a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Reservations"
+              }
+            },
+            "Property": "DayPart"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bff7f7ddfbab98e289f4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Desks"
+              }
+            },
+            "Property": "DeskName"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

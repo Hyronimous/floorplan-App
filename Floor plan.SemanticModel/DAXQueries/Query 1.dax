@@ -1,0 +1,13 @@
+DEFINE
+    FUNCTION AvatarUrl = (
+        UserId : numeric,
+        Gender : STRING
+    ) =>
+        "https://api.dicebear.com/7.x/avataaars/svg?seed=user_"
+        & FORMAT ( UserId, "000" )
+        & IF (
+            Gender = "Female",
+            "&gender=female",
+            "&gender=male"
+        )
+EVALUATE {AvatarUrl(1,"Female")}
